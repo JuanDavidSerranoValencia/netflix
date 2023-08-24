@@ -72,7 +72,28 @@ const path ="config";
 )(path);
 
 (async()=>{
-    le
-})
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let seleccion = document.querySelector("#tarjetas");
+    seleccion.insertAdjacentHTML("beforeend",/*html*/`
+        ${res.seccion2.map((value) =>/*html*/ ` 
+        <div  class="col">
+            <div class="card mb-4 rounded-0  shadow-sm">
+                <div class="card-header  rounded-0  bg-transparent-danger py-3 text-bg-danger border-danger">
+                    <h4 class="my-0 fw-normal">${value.titulo}</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">${value.precio}<small class="text-body-secondary fw-light">${value.tipoMoneda}</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                    <li>Compatible on 1 devices</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-danger bs-blue">${value.btn}</button>
+                </div>
+            </div>
+        </div>
 
-
+        `).join(" ")}
+    
+    `)})(path);
+            
+            

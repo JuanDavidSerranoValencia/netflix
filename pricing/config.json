@@ -21,7 +21,50 @@
                     "texto":"Change or cancel your plan anytime."
                 }
                 ]
-        }
+        },
 
+
+        "seccion2":[
+            {
+                "titulo":"Basic",
+                "precio":"$16,900",
+                "tipoMoneda":"COP",
+                "contenidoTarget":[
+                    {
+                        "p1":"Compatible on 1 devices",
+                        "p2":"Watch in HD",
+                        "p3":"Download on 1 devices"
+                    }
+                ],
+                "btn":"Next"
+            },
+            {
+                "titulo":"Standar",
+                "precio":"$26,900",
+                "tipoMoneda":"COP",
+                "contenidoTarget":[
+                    {
+                        "p1":"Compatible on 2 devices",
+                        "p2":"Watch in HD",
+                        "p3":"Download on 1 devices"
+                    }
+                ],
+                "btn":"Next"
+            },
+            {
+                "titulo":"Premiun",
+                "precio":"$38,900",
+                "tipoMoneda":"COP",
+                "contenidoTarget":[
+                    {
+                        "p1":"Compatible on 2 devices",
+                        "p2":"Watch in HD",
+                        "p3":"Download on 1 devices"
+                    }
+                ],
+                "btn":"Next"
+            }
+        ]
+        
 
 }
