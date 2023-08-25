@@ -23,7 +23,7 @@
                 ]
         },
 
-
+        
         "seccion2":[
             {
                 "titulo":"Basic",
@@ -31,9 +31,12 @@
                 "tipoMoneda":"COP",
                 "contenidoTarget":[
                     {
-                        "p1":"Compatible on 1 devices",
-                        "p2":"Watch in HD",
-                        "p3":"Download on 1 devices"
+                        "p1":"Compatible on 2 devices<br> "},
+                    {
+                        "p1":"Compatible on 2 devices<br> "
+                    },
+                    {
+                        "p1":"Compatible on 2 devices<br> "
                     }
                 ],
                 "btn":"Next"
@@ -44,9 +47,12 @@
                 "tipoMoneda":"COP",
                 "contenidoTarget":[
                     {
-                        "p1":"Compatible on 2 devices",
-                        "p2":"Watch in HD",
-                        "p3":"Download on 1 devices"
+                        "p1":"Compatible on 2 devices <br> "},
+                    {
+                        "p1":"Compatible on 2 devices <br> "
+                    },
+                    {
+                        "p1":"Compatible on 2 devices<br>"
                     }
                 ],
                 "btn":"Next"
@@ -57,9 +63,12 @@
                 "tipoMoneda":"COP",
                 "contenidoTarget":[
                     {
-                        "p1":"Compatible on 2 devices",
-                        "p2":"Watch in HD",
-                        "p3":"Download on 1 devices"
+                        "p1":"Compatible on 2 devices <br> "},
+                    {
+                        "p1":"Compatible on 2 devices<br>"
+                    },
+                    {
+                        "p1":"Compatible on 2 devices<br>"
                     }
                 ],
                 "btn":"Next"

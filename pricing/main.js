@@ -67,7 +67,7 @@ const path ="config";
             <h1 class="display-6 fw-normal text-body-emphasis">${res.seccion1.titulo2}</h1>
             <p class="fs-5 text-body-secondary ">
             ${res.seccion1.parrafo.map((value) =>/*html*/ ` 
-                ${value.img} ${value.texto} <br>`).join("")}</br>
+                ${value.img} ${value.texto} <br>`).join("")}
             </p>`)}
 )(path);
 
@@ -85,8 +85,12 @@ const path ="config";
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title">${value.precio}<small class="text-body-secondary fw-light">${value.tipoMoneda}</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                    <li>Compatible on 1 devices</li>
+                        <li>
+                            ${ value.contenidoTarget.map((cont)=>/*html*/` 
+                            ${cont.p1}</li>` ).join("")}
                     </ul>
+                    
+                    
                     <button type="button" class="w-100 btn btn-lg btn-outline-danger bs-blue">${value.btn}</button>
                 </div>
             </div>
