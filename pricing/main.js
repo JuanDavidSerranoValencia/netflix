@@ -89,15 +89,24 @@ const path ="config";
                             ${ value.contenidoTarget.map((cont)=>/*html*/` 
                             ${cont.p1}</li>` ).join("")}
                     </ul>
-                    
-                    
                     <button type="button" class="w-100 btn btn-lg btn-outline-danger bs-blue">${value.btn}</button>
                 </div>
             </div>
         </div>
-
         `).join(" ")}
     
     `)})(path);
+
+    (async()=>{
+        let peticion = await fetch(`${path}.json`);
+        let res =  await peticion.json();
+        let seleccion = document.querySelector('#tabla');
+        seleccion.insertAdjacentHTML("beforeend",/*html*/`
+            ${res.seccion3.map((value=>/*html*/` 
             
+            `))}
+        `)
+    }
+    )(path)
+        
             

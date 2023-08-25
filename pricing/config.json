@@ -68,12 +68,16 @@
                         "p1":"Compatible on 2 devices<br>"
                     },
                     {
-                        "p1":"Compatible on 2 devices<br>"
+                        "p1":"Hola Paola<br>"
                     }
                 ],
                 "btn":"Next"
             }
-        ]
+        ],
+
+        "seccion3":{
+            
+        }
         
 
 }
