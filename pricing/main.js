@@ -95,18 +95,67 @@ const path ="config";
         </div>
         `).join(" ")}
     
-    `)})(path);
+`)})(path);
 
-    (async()=>{
-        let peticion = await fetch(`${path}.json`);
-        let res =  await peticion.json();
-        let seleccion = document.querySelector('#tabla');
-        seleccion.insertAdjacentHTML("beforeend",/*html*/`
-            ${res.seccion3.map((value=>/*html*/` 
+let construirTabla =async()=>{
+    let peticion = await fetch(`${path}.json `);
+    let res = await peticion.json();
+    let Selecion = document.querySelector("#tabla");
+    Selecion.insertAdjacentHTML("beforeend",/*html*/ `
+    
+    <div class="table-responsive">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    ${res.seccion3.thead.columna1}
+                    ${res.seccion3.thead.columna2}
+                    ${res.seccion3.thead.columna3}
+                    ${res.seccion3.thead.columna4}
+                </tr>
+            </thead>
+            <tbody>
+                ${res.seccion3.tbody.map((value)=>/*html*/`
+                <tr>
+                    <td scope="row" class="text-start">${value.columna1}</td>
+                    <td scope="row" class="text-center  align-middle text-muted ">${value.columna2}</td>
+                    <td scope="row" class="text-center  align-middle text-muted" >${value.columna3}</td>
+                    <td scope="row" class="text-center align-middle  text-danger">${value.columna4}</td>
+                </tr>
+                ` ).join(" ")}
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <p>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our Terms of Use for more details.</p>
+            <p>Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.</p>
+        </div>
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+            <button type="button" class="w-50 btn btn-lg btn-danger mb-3 ">${res.seccion3.btn}</button>
+        </div>
+        
+    `)}
+    let construirFooter =async()=>{
+        let peticion = await fetch(`${path}.json `);
+        let res = await peticion.json();
+        let Selecion = document.querySelector("#abajo");
+        Selecion.insertAdjacentHTML("beforeend",/*html*/ `
+        <div class="row">
+            <div class="col-12 col-md">
+                <img class="mb-2" src="${res.seccion4.copyright.icon}" alt="" width="35" height="35">
+                <small class="d-block mb-3 text-body-secondary">&copy;${res.seccion4.copyright.text}</small>
+            </div>
+            ${res.seccion4.terms.map((value)=>/*html*/`
+            <div class="col-6 col-md">
+                <ul class="list-unstyled text-small">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">${value.lista.i1}</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">${value.lista.i2}</a></li>
             
-            `))}
+                <ul>
+            </div>
+            `).join(" ")}
+        </div>
         `)
     }
-    )(path)
-        
-            
+
+construirTabla();
+construirFooter();
