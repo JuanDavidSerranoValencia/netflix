@@ -23,9 +23,3 @@ Puedes utilizar este proyecto siguiendo estos sencillos pasos:
    ```
 
 2. Luego, simplemente abre el archivo `index.html` en tu navegador web favorito para explorar la réplica de la página de inicio de Netflix.
-
-## Capturas de Pantalla
-
-A continuación, puedes ver una captura de pantalla de la réplica de Netflix:
-
-![Captura de Pantalla](screenshots/netflix-clone.png)
